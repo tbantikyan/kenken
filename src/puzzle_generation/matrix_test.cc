@@ -1,6 +1,5 @@
+#include "puzzle_generation/matrix.h"
 #include <gtest/gtest.h>
-#include "matrix.h"
-
 
 TEST(MatrixTest, Construct_MatrixOfGivenSize_ReturnsGivenSize) {
     for (uchar s : {0, 1, 3, 4, 9}) {
@@ -21,7 +20,7 @@ TEST(MatrixTest, SetAndGet_RandomValues_ReturnsSetValue) {
         m.SetCell(0, 6, s);
         ASSERT_EQ(m.GetCell(0, 6), s);
 
-        m.SetCell(0, 0, s+1);
-        ASSERT_EQ(m.GetCell(0, 0), s+1);
+        m.SetCell(0, 0, s + 1);
+        ASSERT_EQ(m.GetCell(0, 0), s + 1);
     }
 }
